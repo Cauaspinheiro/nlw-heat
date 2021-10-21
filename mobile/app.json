@@ -1,0 +1,20 @@
+{
+  "name": "nlwheat",
+  "displayName": "nlw_heat",
+  "expo": {
+    "android": {
+      "splash": {
+        "image": "./assets/splash.png",
+        "backgroundColor": "#141412"
+      }
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "ts", "tsx", "svg"]
+    },
+    "name": "nlw_heat",
+    "slug": "nlw_heat",
+    "version": "1.0.0",
+    "assetBundlePatterns": ["**/*"]
+  }
+}
