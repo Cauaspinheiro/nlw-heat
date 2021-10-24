@@ -8,7 +8,7 @@ export default StyleSheet.create({
     marginBottom: 20,
   },
   content: {
-    paddingTop: 135,
+    paddingTop: 16,
     paddingBottom: 184,
   },
 });

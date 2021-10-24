@@ -6,15 +6,15 @@ import Message from "../entities/message";
 import api from "../services/api";
 
 import styles from "../styles/components/MessageList.styles";
-import { MESSAGES_EXAMPLE } from "../utils/messages";
+
 import MessageItem from "./MessageItem";
 
-let messagesQueue: Message[] = MESSAGES_EXAMPLE as Message[];
+let messagesQueue: Message[] = [];
 
 const socket = io(String(api.defaults.baseURL));
 
 socket.on("new_message", (newMessage) => {
-  messagesQueue.push(newMessage);
+  messagesQueue.push(new Message(newMessage));
 });
 
 const MessageList: React.FC = () => {
@@ -23,7 +23,7 @@ const MessageList: React.FC = () => {
   const fetchMessages = async () => {
     const { data } = await api.get<Message[]>("/messages");
 
-    setCurrentMessages(data);
+    setCurrentMessages(data.map((message) => new Message(message)));
   };
 
   const handleSetNewMessage = () => {
@@ -48,7 +48,7 @@ const MessageList: React.FC = () => {
       keyboardShouldPersistTaps="never"
     >
       {currentMessages.map((message) => (
-        <MessageItem key={message.id} message={message} />
+        <MessageItem key={message.user_id} message={message} />
       ))}
     </ScrollView>
   );

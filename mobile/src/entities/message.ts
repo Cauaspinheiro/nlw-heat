@@ -1,12 +1,12 @@
 import User from "./user";
 
 export default class Message {
-  id: string;
+  user_id: string;
   text: string;
   user: User;
 
   constructor(props: Message) {
-    this.id = props.id;
+    this.user_id = Math.random().toString() + props.user_id;
     this.text = props.text;
     this.user = props.user;
   }

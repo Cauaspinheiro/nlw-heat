@@ -20,7 +20,7 @@ const Header: React.FC = () => {
             <Text style={styles.logoutText}>Sair</Text>
           </TouchableOpacity>
 
-          <UserPhoto />
+          <UserPhoto avatarUrl={user.avatar_url} />
         </View>
       )}
     </View>
