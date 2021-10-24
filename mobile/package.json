@@ -7,11 +7,18 @@
   },
   "dependencies": {
     "@expo-google-fonts/roboto": "^0.2.0",
+    "@expo/vector-icons": "^12.0.0",
+    "@react-native-async-storage/async-storage": "^1.13.0",
+    "axios": "^0.23.0",
     "expo": "~41.0.1",
     "expo-app-loading": "^1.1.2",
+    "expo-auth-session": "~3.2.3",
     "expo-linear-gradient": "~9.1.0",
+    "expo-random": "~11.1.2",
     "expo-splash-screen": "^0.11.4",
     "expo-updates": "~0.5.4",
+    "hermes-engine": "0.5.2-rc1",
+    "moti": "^0.8.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "~0.63.4",
@@ -20,7 +27,8 @@
     "react-native-reanimated": "~2.1.0",
     "react-native-screens": "~3.0.0",
     "react-native-svg": "12.1.0",
-    "react-native-unimodules": "~0.13.3"
+    "react-native-unimodules": "~0.13.3",
+    "socket.io-client": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

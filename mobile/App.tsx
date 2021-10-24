@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Home from "./src/screens/Home";
 
 import {
@@ -9,6 +9,7 @@ import {
 import AppLoading from "expo-app-loading";
 import { StatusBar, View } from "react-native";
 import { COLORS } from "./src/theme";
+import { AuthProvider } from "./src/contexts/AuthContext";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -19,7 +20,7 @@ export default function App() {
   if (!fontsLoaded) return <AppLoading />;
 
   return (
-    <View style={{ flex: 1 }}>
+    <AuthProvider>
       <Home />
 
       <StatusBar
@@ -27,6 +28,6 @@ export default function App() {
         backgroundColor={COLORS.BLACK_SECONDARY}
         translucent
       />
-    </View>
+    </AuthProvider>
   );
 }

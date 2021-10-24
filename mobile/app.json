@@ -2,6 +2,7 @@
   "name": "nlwheat",
   "displayName": "nlw_heat",
   "expo": {
+    "scheme": "nlw",
     "android": {
       "splash": {
         "image": "./assets/splash.png",
